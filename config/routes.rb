@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  post 'user_token' => 'user_token#create'
+  resources :material_pos
+  resources :suppliers
+  resources :jobs
+  resources :clients
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-    # Home controller routes.
+  # Home controller routes.
   root   'home#index'
   get    'auth'            => 'home#auth'
  

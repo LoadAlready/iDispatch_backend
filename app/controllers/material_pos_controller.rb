@@ -1,0 +1,2 @@
+class MaterialPosController < ApplicationController
+end
