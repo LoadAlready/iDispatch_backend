@@ -1,5 +1,7 @@
 class User < ApplicationRecord
+  has_many :crews
   has_many :jobs, through: :crew
+  
 
   # Necessary to authenticate.
   has_secure_password

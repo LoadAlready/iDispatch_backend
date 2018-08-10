@@ -24,3 +24,26 @@ x = MaterialPo.create(supplier_id: 1, job_id:2, description: "some material")
 x = MaterialPo.create(supplier_id: 1, job_id:1, description: "some material")
 x = MaterialPo.create(supplier_id: 2, job_id:3, description: "some material")
 x = MaterialPo.create(supplier_id: 4, job_id:4, description: "some material")
+
+x = User.create(username: "test1", email:"test1@testing.com", firstname: "test", lastname: "test", street_address: "123 fake street", city: "fake city usa", state: "ny", zip: 12321, password: "test")
+x = User.create(username: "test2", email:"test2@testing.com", firstname: "test", lastname: "test", street_address: "123 fake street", city: "fake city usa", state: "ny", zip: 12321, password: "test")
+x = User.create(username: "test3", email:"test3@testing.com", firstname: "test", lastname: "test", street_address: "123 fake street", city: "fake city usa", state: "ny", zip: 12321, password: "test")
+x = User.create(username: "test4", email:"test4@testing.com", firstname: "test", lastname: "test", street_address: "123 fake street", city: "fake city usa", state: "ny", zip: 12321, password: "test")
+x = User.create(username: "test5", email:"test56@testing.com", firstname: "test", lastname: "test", street_address: "123 fake street", city: "fake city usa", state: "ny", zip: 12321, password: "test")
+x = User.create(username: "test6", email:"test6@testing.com", firstname: "test", lastname: "test", street_address: "123 fake street", city: "fake city usa", state: "ny", zip: 12321, password: "test")
+x = User.create(username: "test7", email:"test7@testing.com", firstname: "test", lastname: "test", street_address: "123 fake street", city: "fake city usa", state: "ny", zip: 12321, password: "test")
+
+x = Crew.create(user_id: 1, job_id: 1)
+x = Crew.create(user_id: 1, job_id: 2)
+x = Crew.create(user_id: 1, job_id: 3)
+x = Crew.create(user_id: 2, job_id: 1)
+x = Crew.create(user_id: 3, job_id: 1)
+x = Crew.create(user_id: 2, job_id: 2)
+x = Crew.create(user_id: 4, job_id: 3)
+x = Crew.create(user_id: 5, job_id: 5)
+x = Crew.create(user_id: 6, job_id: 2)
+
+
+
+
+
