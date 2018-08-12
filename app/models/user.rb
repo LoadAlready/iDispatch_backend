@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :crews
-  has_many :jobs, through: :crew
+  has_many :jobs, through: :crews
   
 
   # Necessary to authenticate.
