@@ -8,6 +8,7 @@ class HomeController < ApplicationController
  
   # Authorized only method
   def auth
-    render json: { status: 200, msg: "You are currently Logged-in as #{current_user.username}" }
+    # byebug
+    render json: { status: 200, userID: current_user.id, msg: "You are currently Logged-in as #{current_user.username}" }
   end
 end
