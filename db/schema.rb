@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2018_08_10_151608) do
     t.integer "zip"
     t.string "email"
     t.string "refrence"
+    t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -32,17 +33,6 @@ ActiveRecord::Schema.define(version: 2018_08_10_151608) do
     t.integer "job_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "employees", force: :cascade do |t|
-    t.string "username", null: false
-    t.string "email", null: false
-    t.string "password_digest"
-    t.string "role", default: "user", null: false
-    t.datetime "last_login"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_employees_on_email"
   end
 
   create_table "jobs", force: :cascade do |t|
