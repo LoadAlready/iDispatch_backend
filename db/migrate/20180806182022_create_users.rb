@@ -9,6 +9,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :city
       t.string :state
       t.integer :zip
+      t.string :phone
       t.string :password_digest
       t.string :role, null: false, default: 'user'
       t.datetime :last_login

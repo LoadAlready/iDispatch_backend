@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 2018_08_10_151608) do
     t.string "city"
     t.string "state"
     t.integer "zip"
+    t.string "phone"
     t.string "password_digest"
     t.string "role", default: "user", null: false
     t.datetime "last_login"
