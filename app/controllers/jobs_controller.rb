@@ -20,6 +20,10 @@ class JobsController < ApplicationController
 
     @crew = Crew.new(user_id: params[:job][:leadTechID], job_id: @job.id )
     @crew.save
+
+    @material_po = MaterialPo.new(supplier_id: params[:job][:suppliers], job_id: @job.id, description: params[:job][:materialPosDescription] )
+    @material_po.save
+    
   end
 
   def show
