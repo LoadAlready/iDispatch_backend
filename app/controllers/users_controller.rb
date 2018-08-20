@@ -6,7 +6,8 @@ class UsersController < ApplicationController
  
   # Should work if the current_user is authenticated.
   def index
-    render json: {status: 200, msg: 'Logged-in'}
+    @users = User.all
+    render json: {status: 200, msg: 'Logged-in', users: @users}
   end
  
   # Call this method to check if the user is logged-in.
