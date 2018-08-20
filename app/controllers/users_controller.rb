@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   end
   # Method to create a new user using the safe params we setup.
   def create
+    byebug
     user = User.new(user_params)
     if user.save
       render json: {status: 200, msg: 'User was created.'}
@@ -42,7 +43,7 @@ class UsersController < ApplicationController
  
   # Setting up strict parameters for when we add account creation.
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation)
+    params.require(:user).permit(:username, :email, :password, :firstname, :lastname, :street_address, :city, :state, :zip, :phone, :password_confirmation)
   end
  
   # Adding a method to check if current_user can update itself.
