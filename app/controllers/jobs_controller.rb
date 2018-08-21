@@ -31,6 +31,12 @@ class JobsController < ApplicationController
     render json: @job
   end
 
+  def update
+    @job = Job.all.find(params[:id])
+    @job.update(:description => params[:job][:editedDescription], :job_notes => params[:job][:editedJobNotes])
+    render json: @job
+  end
+
   private
  
   def job_params
