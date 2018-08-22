@@ -33,7 +33,15 @@ class JobsController < ApplicationController
 
   def update
     @job = Job.all.find(params[:id])
-    @job.update(:description => params[:job][:editedDescription], :job_notes => params[:job][:editedJobNotes])
+
+    if params[:job][:update] === 'timeIn'
+       @job.update(:time_arrived => params[:job][:time_arrived])
+    elsif params[:job][:update] === 'jobDetails'
+       @job.update(:description => params[:job][:editedDescription], :job_notes => params[:job][:editedJobNotes])
+    elsif params[:job][:update] === 'timeOut'
+       @job.update(:time_completed => params[:job][:time_completed])
+    end
+
     render json: @job
   end
 
